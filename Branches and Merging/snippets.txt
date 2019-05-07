@@ -1,0 +1,27 @@
+git branch Posts
+
+git checkout Posts
+
+git status
+
+git add .
+
+git commit -m 'Added post pages'
+
+git chekout master
+
+git merge Posts
+
+git commit -a -m 'Edited readme'
+
+git status
+
+git checkout Posts
+
+git commit -a -m 'Edited readme 2'
+
+git merge master
+
+git commit -a -m 'Fixed conflict'
+
+git status

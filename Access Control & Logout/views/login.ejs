@@ -1,0 +1,17 @@
+<%- include('includes/header') %>
+
+<div class="container reg-page">
+    <%- messages() %>
+      <form method="post" action="/users/login" class="form-signin">
+        <h2 class="form-signin-heading text-center">User Login</h2>
+        <label class="sr-only">Username</label>
+        <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+        <br>
+        <label class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <p>No Account? <a href="/users/register">Register</a></p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div> <!-- /container -->
+
+<%- include('includes/footer') %>

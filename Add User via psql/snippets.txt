@@ -1,0 +1,27 @@
+psql -U postgres
+
+CREATE DATABASE acme;
+
+\l
+
+SELECT * FROM pg_user;
+
+CREATE USER devuser WITH PASSWORD '123456';
+
+SELECT * FROM pg_user;
+
+ALTER USER devuser WITH PASSWORD:
+
+SELECT * FROM pg_user;
+
+UPDATE pg_shadow SET passwd = 'something' WHERE username = 'devuser';
+
+GRANT ALL ON database acme TO devuser;
+
+\q
+
+psql -U devuser
+
+\c
+
+
