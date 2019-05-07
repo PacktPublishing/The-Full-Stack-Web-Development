@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery & Forms</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+</head>
+<body>
+	<form id="myForm">
+		<div>
+			<label>Name: </label><br>
+			<input type="text">
+		</div>
+		<div>
+			<label>Email: </label><br>
+			<input type="text">
+		</div>
+		<div>
+			<label>Location: </label><br>
+			<input type="text" value="New York">
+		</div>
+		<div>
+			<label>Category: </label><br>
+			<select>
+				<option value="1">Category 1</option>
+				<option value="2">Category 2</option>
+				<option value="3">Category 3</option>
+			</select>
+		</div>
+		<input type="submit" value="Submit">
+	</form>
+	<br><br>
+	<div id="output"></div>
+
+	<script>
+		$(document).ready(function(){
+			// Focus & Blur Events	
+			$('#myForm input').focus(function(){
+				$(this).css('background', 'pink');
+
+				$(this).blur(function(){
+					$(this).css('background', 'none');
+				});
+			});
+
+			// Change Event
+			$('#myForm select').change(function(){
+				var cat = "";
+				$('select option:selected').each(function(){
+					cat += $(this).text() + " ";
+				});
+				$('#output').text(cat);
+			});
+
+			// Select Event
+			$(':input').select(function(){
+				$('#output').text('Something was selected').show();
+			});
+
+			// Submit Event
+			$('#myForm').submit(function(e){
+				e.preventDefault();
+				$('#output').text('Form Submitted');
+			});
+
+			// Keyup and Keydown Events
+			$('#myForm input').keydown(function(){
+				$('#output').text('You are typing..');
+				$(this).keyup(function(){
+					$('#output').text('');
+				});
+			});
+		});
+	</script>
+</body>
+</html>

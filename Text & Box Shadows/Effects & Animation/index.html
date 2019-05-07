@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Effects & Animation</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+	<style>
+	.square, .square2{
+		width:100px;
+		height:100px;
+		background:black;
+		position:relative;
+	}
+	</style>
+</head>
+<body>
+	<button id="btnHide">Hide</button>
+	<button id="btnShow">Show</button>
+	<button id="btnTog">Toggle</button>
+	<button id="btnFadeOut">Fade Out</button>
+	<button id="btnFadeIn">Fade In</button>
+	<button id="btnFadeTog">Fade Toggle</button>
+	<button id="btnSlideUp">Slide Up</button>
+	<button id="btnSlideDown">Slide Down</button>
+	<button id="btnSlideTog">Slide Toggle</button>
+	<button id="btnStop">Stop</button>
+	<p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida nisi vitae lectus euismod elementum. Proin suscipit porttitor mauris, quis volutpat dolor blandit a. Vivamus quis iaculis orci. Ut id laoreet purus, et scelerisque magna. Maecenas convallis ligula ac dictum fermentum. Morbi ultrices interdum ex vitae ultrices</p>
+	<br><br>
+	<button id="anim">Animate</button>
+	<br><br>
+	<div class="square"></div>
+	<br><br>
+	<button id="anim2">Animate</button>
+	<br><br>
+	<div class="square2"></div>
+	<script>
+		$(document).ready(function(){
+			$('#btnHide').click(function(){
+				$('.p1').hide();
+			});
+
+			$('#btnShow').click(function(){
+				$('.p1').show();
+			});
+
+			$('#btnTog').click(function(){
+				$('.p1').toggle();
+			});
+
+			$('#btnFadeOut').click(function(){
+				$('.p1').fadeOut(2000);
+			});
+
+			$('#btnFadeIn').click(function(){
+				$('.p1').fadeIn(2000);
+			});
+
+			$('#btnFadeTog').click(function(){
+				$('.p1').fadeToggle(2000);
+			});
+
+			$('#btnSlideUp').click(function(){
+				$('.p1').slideUp(4000);
+			});
+
+			$('#btnSlideDown').click(function(){
+				$('.p1').slideDown(4000);
+			});
+
+			$('#btnSlideTog').click(function(){
+				$('.p1').slideToggle(4000);
+			});
+
+			$('#btnStop').click(function(){
+				$('.p1').stop();
+			});
+
+			$('#anim').click(function(){
+				$('.square').animate({
+					left: '+=250px',
+					opacity: '0.5',
+					height: '+=100px',
+					width: '+=100px'
+				}, 'fast');
+			});
+
+			$('#anim2').click(function(){
+				var div = $('.square2');
+				div.animate({height:'400px', opacity:'0.4'}, 'slow');
+				div.animate({width:'400px', opacity:'0.8'}, 'slow');
+				div.animate({height:'100px', opacity:'0.4'}, 'slow');
+				div.animate({width:'100px', opacity:'0.8'}, 'slow');
+			});
+		});
+	</script>
+</body>
+</html>

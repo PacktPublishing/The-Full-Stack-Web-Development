@@ -1,0 +1,34 @@
+body {
+  background: white;
+  color: black;
+  font-family: Arial; }
+
+nav {
+  font-size: 18px;
+  width: 500px; }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  nav li {
+    background: #f4f4f4;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px; }
+  nav a {
+    text-decoration: none;
+    color: #666; }
+
+.heading, h1.red, h1.blue {
+  border-bottom: 5px red solid;
+  font-size: 33px;
+  font-family: Tahoma; }
+
+h1.red {
+  border-color: red; }
+
+h1.blue {
+  border-color: blue; }
+
+/*# sourceMappingURL=style.css.map */

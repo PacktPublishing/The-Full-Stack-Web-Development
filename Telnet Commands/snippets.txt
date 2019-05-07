@@ -1,0 +1,23 @@
+>add username 0 3600 4
+>brad
+
+>get username
+>delete username
+
+>add age 0 3600 2
+35
+
+>append age 0 3600 2
+10
+
+>prepend age 0 3600 2
+20
+
+>replace age 0 3600 2
+35
+
+>incr age 2
+
+>decr age 2
+
+>flush_all

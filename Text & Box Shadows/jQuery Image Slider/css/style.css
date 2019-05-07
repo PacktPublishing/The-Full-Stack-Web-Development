@@ -1,0 +1,73 @@
+* {
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+
+body {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	color:#666666;
+	font-size:50px;
+	margin-bottom:30px;
+}
+
+#container {
+	width: 635px;
+	margin: 100px auto 0 auto;
+	position:relative;
+}
+
+.slider {
+	height: 332px;
+}
+.slider img {
+	padding: 15px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+}
+
+#nav {
+	list-style-type:none;
+	z-index:150;
+}
+#nav li a {
+	display:block;
+	width:58px;
+	height:102px;
+	text-indent:-9999px;
+	outline:none;
+}
+
+#prev a {
+	background:url(../img/prev.png);
+	width:58px;
+	height:102px;
+	position:absolute;
+	top:240px;
+	left:-70px;
+}
+#next a {
+	background:url(../img/next.png);
+	width:58px;
+	height:102px;
+	position:absolute;
+	top:240px;
+	right:-110px;
+}
+#next a:hover {
+	background:url(../img/next_hover.png);
+}
+#prev a:hover {
+	background:url(../img/prev_hover.png);
+}

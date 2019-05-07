@@ -1,0 +1,25 @@
+{
+  "name": "passportapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.14.1",
+    "express-validator": "^2.20.8",
+    "mongojs": "^2.4.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}

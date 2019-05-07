@@ -1,0 +1,51 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+body{
+	background: $background;
+	color:$color;
+	font-family:$font;
+}
+
+@if $style-nav == 1{
+	nav{
+		font-size:18px;
+		width:400px + 100px;
+
+		ul{
+			list-style:none;
+			padding:0;
+			margin:0;
+		}
+
+		li{
+			background:#f4f4f4;
+			padding:5px;
+			margin-bottom:5px;
+			@include border-radius(5px);
+		}
+
+		a{
+			text-decoration:none;
+			color:#666;
+		}
+	}
+}
+
+.heading{
+	border-bottom:5px red solid;
+	font-size:33px;
+	font-family: Tahoma;
+}
+
+
+h1.red{
+	@extend .heading;
+	border-color: red;
+}
+
+h1.blue{
+	@extend .heading;
+	border-color: blue;
+}

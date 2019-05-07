@@ -1,0 +1,51 @@
+// Set multiple key-values
+MSET user:name "Bob" user:email "bob@gmail.com"
+
+// Get multiple key-values
+MGET user:name user:email
+
+// Set values only if none are already set - Wont work
+MSETNX user:name "Jeff" user:city "Miami"
+// Will work
+MSETNX user:city "Miami"
+
+// Set expire
+SET foo bar
+EXPIRE foo 5
+// Same thing
+SETEX foo 10 "bar"
+TTL foo
+// In miliseconds
+PSETEX foo 10000 "bar"
+PTTL foo
+
+// Check exists
+EXISTS greeting
+// Append
+APPEND greeting Hello
+GET greeting
+APPEND greeting " World"
+GET greeting
+
+// Rename var name
+RENAME greeting greet
+GET greet
+
+// Get string length
+STRLEN greet
+
+// Return old value then set
+GETSET greet "Hi There"
+
+// Get range
+GETRANGE greet 0 4
+GETRANGE greet 5 7
+
+FLUSHALL
+
+
+
+
+
+
+

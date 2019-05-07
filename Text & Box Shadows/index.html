@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shadows</title>
+	<style>
+		h1.text1{
+			text-shadow: 2px 2px 5px red;
+		}
+		h1.text2{
+			color:#ffffff;
+			text-shadow: 2px 2px 5px black;
+		}
+		h1.text3{
+			text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+		}
+		#box1{
+			width:300px;
+			height:200px;
+			padding:15px;
+			background-color: red;
+			box-shadow: 10px 10px 5px grey;
+		}
+
+		.card{
+			width:250px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			text-align: center;
+		}
+
+		.card-header{
+			background-color: #ff0000;
+			color:#ffffff;
+			padding:10px;
+			font-size:40px;
+		}
+
+		.card-container{
+			padding:10px;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="text1">Hello World</h1>
+	<h1 class="text2">Hello World</h1>
+	<h1 class="text3">Hello World</h1>
+
+	<div id="box1"></div>
+	<br>
+	<div class="card">
+		<div class="card-header">
+			<h1>1</h1>
+		</div>
+		<div class="card-container">
+			<p>This is a card</p>
+		</div>
+	</div>
+</body>
+</html>
