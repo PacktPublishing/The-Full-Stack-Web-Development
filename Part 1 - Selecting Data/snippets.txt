@@ -1,0 +1,21 @@
+SELECT * FROM customers;
+
+SELECT first_name, last_name FROM customers;
+
+SELECT * FROM customers WHERE state = 'MA';
+
+SELECT * FROM customers WHERE id = 2;
+
+SELECT * FROM customers WHERE id > 3;
+
+SELECT id, email FROM customers WHERE id BETWEEN 2 AND 4;
+
+SELECT * FROM customers WHERE city LIKE 'B%';
+
+SELECT * FROM customers WHERE city LIKE 'Bo%';
+
+SELECT * FROM customers WHERE city LIKE '%o%';
+
+SELECT * FROM customers WHERE city = 'Amesbury' OR 'Salisbury';
+
+SELECT * FROM customers WHERE city IN('Amesbury', 'Salisbury');

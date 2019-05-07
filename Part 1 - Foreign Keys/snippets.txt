@@ -1,0 +1,45 @@
+CREATE TABLE products(
+	id INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255),
+	price INT,
+	PRIMARY KEY(id)
+);
+
+INSERT INTO products(name, price) VALUES ('Product One', 10);
+
+CREATE TABLE orders(
+	id INT NOT NULL AUTO_INCREMENT,
+	order_number INT,
+	customer_id INT,
+	product_id INT,
+	order_date DATETIME default CURRENT_TIMESTAMP,
+	PRIMARY KEY(id),
+	FOREIGN KEY(customer_id)REFERENCES customers(id),
+	FOREIGN KEY(product_id)REFERENCES products(id)
+);
+
+
+INSERT INTO orders(
+	order_number,
+	customer_id,
+	product_id
+) VALUES (
+	001,
+	1,
+	1
+);
+
+
+INSERT INTO orders(
+	order_number,
+	customer_id,
+	product_id
+) VALUES 
+(2,1,3),
+(3,1,2),
+(4,2,4),
+(5,2,3),
+(6,3,3),
+(7,3,5),
+(8,2,5),
+(9,4,1);

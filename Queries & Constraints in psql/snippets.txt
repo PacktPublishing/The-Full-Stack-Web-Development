@@ -1,0 +1,39 @@
+psql -U devuser acme
+
+CREATE TABLE articles(id SERIAL PRIMARY KEY, title VARCHAR(255), body TEXT);
+
+\dt
+
+INSERT INTO articles(title, body) VALUES('Article One', 'This is the body for article 1');
+
+SELECT * FROM articles;
+
+INSERT INTO articles(title, body) VALUES('Article Two', 'This is the body for article 2');
+
+INSERT INTO articles(title, body) VALUES('Article Three', 'This is the body for article 3');
+
+SELECT * FROM articles;
+
+CREATE TABLE categories(id SERIAL PRIMARY KEY, name VARCHAR(255));
+
+\dt
+
+INSERT INTO categories(name) VALUES('Business'), ('Technology'), ('Style');
+
+SELECT * FROM categories;
+
+ALTER TABLE articles ADD COLUMN category_id INT;
+
+UPDATE articles SET category_id = 1 WHERE id = 1;
+
+UPDATE articles SET category_id = 1 WHERE id = 2;
+
+UPDATE articles SET category_id = 2 WHERE id = 3;
+
+SELECT * FROM articles;
+
+ALTER TABLE articles ADD CONSTRAINT catfk FOREIGN KEY(category_id) REFERENCES categories(id);
+
+DELETE FROM articles WHERE id = 3;
+
+SELECT * FROM articles;

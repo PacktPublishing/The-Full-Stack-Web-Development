@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Plugins</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		Click Me
+		</button>
+
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"></button>
+						<h4 class="modal-title" id="myModalLabel">Modal Title</h4>
+					</div>
+					<div class="modal-body">
+					This is the modal body
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button class="btn btn-primary">Save Changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="dropdown">
+		<button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">Dropdown <span class="caret"></span></button>
+		<ul class="dropdown-menu">
+			<li><a href="#">Link</a></li>
+			<li><a href="#">Link</a></li>
+			<li><a href="#">Link</a></li>
+			<li role="separator" class="divider"></li>
+			<li><a href="#">Link</a></li>
+		</ul>
+		</div>
+
+		<br><br>
+
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#tab1" role="tab" data-toggle="tab">Home</a></li>
+			<li><a href="#tab2" role="tab" data-toggle="tab">Messages</a></li>
+			<li><a href="#tab3" role="tab" data-toggle="tab">Profile</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="tab1">This is tab 1</div>
+			<div role="tabpanel" class="tab-pane" id="tab2">This is tab 2</div>
+			<div role="tabpanel" class="tab-pane" id="tab3">This is tab 3</div>
+		</div>
+
+		<br><br>
+
+		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="This is a tooltip">Click Me</button>
+
+		<br><br>
+
+		<button type="button" class="btn btn-default" data-toggle="popover" data-content="Here is your popover text" title="Popover Title">Click Me</button>
+
+
+    </div> <!-- /container -->
+	
+	<script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<script>
+	$("[data-toggle='tooltip']").tooltip();
+	$("[data-toggle='popover']").popover();
+	</script>
+</body>
+</html>
