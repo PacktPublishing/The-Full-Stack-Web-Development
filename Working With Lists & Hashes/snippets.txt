@@ -1,0 +1,33 @@
+LPUSH users Jake
+LPUSH users Tom
+RPUSH users Fred
+GET users
+LRANGE users 
+LRANGE users 0 -1
+LRANGE users 0 2
+LLEN users
+LPOP users
+RPOP users
+LRANGE users 0 -1
+LPUSH users Sara
+LPUSH users Jill
+LRANGE users 0 -1
+LINSERT users BEFORE "Jill" "Kevin"
+LRANGE users 0 -1
+
+
+HSET user:brad name "Brad Traversy"
+HGET user:brad name
+HMSET user:sam name "Sam Smith" email "sam@gmail.com" age "35"
+HGET user:sam age
+HGET user:sam email
+HGET user:sam name
+HMGET user:sam name age
+HGETALL user:sam
+HKEYS user:sam
+HVALS user:sam
+HINCRBY user:sam age
+HVALS user:sam
+HDEL user:sam age
+HGETALL user:sam
+HLEN user:sam

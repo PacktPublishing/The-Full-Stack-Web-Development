@@ -1,0 +1,32 @@
+$ sudo apt-get install libmemcached-tools
+
+$ memcstat --servers localhost
+
+$ memcdump --server localhost
+
+$ memccat --servers localhost age
+
+$ memcrm --servers localhost age
+
+
+$ for i in `seq 1000`; do echo $i >> book$i; done
+
+$ memccp --servers localhost book*
+
+$ memcstat --servers localhost
+
+$ memcdump --server localhost
+
+$ cat book*
+
+$ memccat --servers localhost book20
+
+$ memccat --servers localhost book*
+
+$ telnet localhost 11211
+
+>get book44
+
+$ /etc/init.d/memcached restart
+
+

@@ -1,0 +1,52 @@
+git init
+
+git status
+
+git add readme.txt
+
+git status
+
+git status
+
+git add readme.txt
+
+git commit
+
+// Press i
+// Enter message
+// Press esc
+// Type :wq and hit enter
+
+git status
+
+// Edit readme.txt
+
+git add readme.txt
+
+git commit readme.txt -m 'readme edit 3'
+
+git log
+
+git add .
+
+git commit -m 'Added index.html and edited readme'
+
+git log
+
+git status
+
+touch .gitignore
+
+git status
+
+git add .
+
+git commit -m 'added ignore'
+
+git add .
+
+git reset HEAD readme.txt
+
+git add .
+
+git commit -m 'readme edit 4'

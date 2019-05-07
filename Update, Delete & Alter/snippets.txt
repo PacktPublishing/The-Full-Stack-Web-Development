@@ -1,0 +1,15 @@
+UPDATE customers
+SET last_name = 'Smith'
+WHERE id = 4;
+
+DELETE FROM customers WHERE id = 7;
+
+ALTER TABLE customers ADD balance VARCHAR(255);
+
+ALTER TABLE customers REMOVE balance;
+
+ALTER TABLE customers MODIFY COLUMN balance float;
+
+UPDATE customers
+SET balance = 500
+WHERE id = 1;

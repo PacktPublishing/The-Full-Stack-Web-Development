@@ -1,0 +1,115 @@
+db.projects.insert({
+  name: 'Test Project',
+  category: 'Web Design',
+  due_date: new Date('2016-12-12'),
+  technologies: ['HTML', 'CSS', 'JavaScript'],
+  developers: [
+    {
+      name:'Brad Traversy',
+      role: 'Head Programmer'   
+    },
+    {
+      name:'John Doe',
+      role: 'Designer'
+    }
+  ],
+  client: {
+    name: 'Brandon Harold',
+    email: 'bharold@gmail.com',
+    phone: '555-555-5555'
+  },
+  cost: 3500
+});
+
+// Update
+db.projects.update({name:'Test Project'},{
+  name: 'Test Project',
+  category: 'Web Design',
+  due_date: new Date('2016-12-12'),
+  technologies: ['HTML', 'CSS', 'JavaScript'],
+  developers: [
+    {
+      name:'Brad Traversy',
+      role: 'Head Programmer'   
+    },
+    {
+      name:'John Doe',
+      role: 'Designer'
+    }
+  ],
+  client: {
+    name: 'Brandon Harold',
+    email: 'bharold@gmail.com',
+    phone: '555-555-5555'
+  },
+  cost: 3500
+});
+
+// $set Operator
+db.projects.update({name:'Test Project'},{
+  $set: {
+    category:'Web programming'
+  }
+});
+
+// Update Array Val
+db.projects.update({name:'Test Project'},{
+  $set: {
+    "technologies.0":"HTML 5",
+    "technologies.1":"CSS 3"
+  }
+});
+
+// Update Object Val
+db.projects.update({name:'Test Project'},{
+  $set: {
+    "client.name":"Bret Harold"
+  }
+});
+
+// Push To Array
+db.projects.update({name:'Test Project'},{
+  $push: {
+    technologies:"PHP"
+  }
+});
+
+// Pull From Array
+db.projects.update({name:'Test Project'},{
+  $pull: {
+    technologies:"PHP"
+  }
+});
+
+// Pop From Array
+db.projects.update({name:'Test Project'},{
+  $pop: {
+    technologies:1
+  }
+});
+
+// Update Doc That Doesnt Exist
+db.projects.update({name:'My Project'},{
+  name:'My Project',
+  category: 'Web Design'
+});
+
+// Upsert Option
+db.projects.update({name:'My Project'},{
+  name:'My Project',
+  category: 'Web Design'
+},
+  {
+    upsert:true
+  }
+);
+
+// Findandmodify
+db.projects.findAndModify({
+  query: {name:'My Project'},
+  update: {$set: {category:' Web Programming'}},
+  upsert: true
+});
+
+// Remove Docs
+db.projects.remove({name:'My Project'});

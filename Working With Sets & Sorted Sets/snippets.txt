@@ -1,0 +1,37 @@
+SADD greetings "Hello"
+SADD greetings "Hi"
+SADD greetings "Good Morning"
+SADD greetings "Welcome"
+SISMEMBER greetings "Hello"
+SISMEMBER greetings "Bye"
+SMEMBERS greetings
+SADD greetings "Hello"
+SMEMBERS greetings
+SCARD greetings
+SADD greets "Hello World"
+SMOVE greetings greets "Hello"
+SMEMBERS greets
+SMEMBERS greetings
+SREM greetings "Hi"
+SRANDMEMBER greetings
+SPOP greetings 1
+SUNION greetings greets
+SDIFF greetings greets
+SADD greetings "Hello"
+SDIFF greetings greets
+
+FLUSHALL
+
+ZADD users 1981 "Sam Smith"
+ZADD users 1983 "Tom Carson"
+ZADD users 1974 "Ben Johnson"
+ZADD users 1981 "Heather Baker"
+ZRANGE users 0 -1
+ZRANGEBYSCORE users 1981
+ZRANK users "Sam Smith"
+ZRANK users "Tom Carson"
+ZRANK users "Jen Williams"
+ZREVRANK users "Sam Smith"
+ZCARD users
+ZINCRBY users 1 "Sam Smith"
+ZSCORE peope "Sam Smith"
