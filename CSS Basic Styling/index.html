@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Styling</title>
+	<style>
+		body{
+			font-family:Arial, sans-serif;
+			font-size:13px;
+		}
+
+		h1{
+			color:red;
+			/*visibility:hidden;*/
+			/*display:none;*/
+			display:inline;
+		}
+
+		.text-center{
+			text-align:center;
+		}
+
+		#box1{
+			background:black;
+			color: white;
+			width:200px;
+			padding-top:20px;
+			padding-bottom:20px;
+			padding-right:20px;
+			padding-left:20px;
+			margin-top:20px;
+			margin-bottom:20px;
+			margin-right:20px;
+			margin-left:20px;
+			border-width:3px;
+			border-color:red;
+			border-style: solid;
+			float:left;
+		}
+
+		#box2{
+			background:blue;
+			color: white;
+			width:200px;
+			padding:20px;
+			margin:20px;
+			border: 3px green solid;
+			float:right;
+		}
+
+		.clr{
+			clear:both;
+		}
+
+		ul.my-list{
+			list-style:none;
+			padding:0;
+			line-height:2.2em;
+		}
+
+		ul.my-list li{
+			border-bottom:1px dotted #666;
+		}
+	</style>
+</head>
+<body>
+	<div class="text-center">
+		<h1 class="text-center">Welcome</h1>
+		<p class="text-center">This is a paragraph</p>
+		<p>This is another paragraph</p>
+	</div>
+
+	<div id="box1">
+		This is box 1
+	</div>
+
+	<div id="box2">
+		This is box 2
+	</div>
+
+	<div class="clr"></div>
+
+	<div>Hello</div>
+
+	<ul class="my-list">
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+	</ul>
+</body>
+</html>

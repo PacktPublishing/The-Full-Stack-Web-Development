@@ -1,0 +1,20 @@
+// Sort
+db.projects.find({}, {name: 1, client: 1}).sort({name: -1}).pretty();
+
+// Limit
+db.projects.find({}, {name: 1, client: 1}).limit(3).pretty();
+
+//Skip
+db.projects.find({}, {name: 1, client: 1}).skip(2).pretty();
+
+// Count
+db.projects.find().count();
+
+// Cursor Var
+var myCursor = db.projects.find();
+
+myCursor.next();
+
+myCursor.hasNext() ? myCursor.next() : null;
+
+myCursor.forEach(printjson);

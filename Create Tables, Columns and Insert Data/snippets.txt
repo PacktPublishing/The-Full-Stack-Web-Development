@@ -1,0 +1,23 @@
+CREATE DATABASE mystore;
+
+CREATE TABLE customers(
+	id INT NOT NULL AUTO_INCREMENT,
+	first_name VARCHAR(255),
+	email VARCHAR(255),
+	password VARCHAR(255),
+	street_address VARCHAR(255),
+	city VARCHAR(255),
+	state VARCHAR(255),
+	zip VARCHAR(255),
+	PRIMARY KEY(id)
+);
+
+INSERT INTO customers(first_name, last_name, email, password, street_address, city, state, zip) VALUES('Brad', 'Traversy', 'brad@gmail.com', '123456', '20 Main st', 'Boston', 'MA', '01294');
+
+INSERT INTO customers(first_name, last_name, email, password, street_address, city, state, zip) VALUES
+('John', 'Doe', 'jdoe@gmail.com', 'abcd', '9 Hill rd', 'Salisbury', 'MA', '01915'),
+('Kevin', 'Smith', 'ksmith@gmail.com', '1234', '77 Sparhawk st', 'Amesbury', 'MA', '01913'),
+('Janet', 'Thompson', 'janet@gmail.com', 'abcd', '123 Well st', 'Salisbury', 'MA', '01915'),
+('Laurie', 'Jensen', 'ljensen@gmail.com', 'abcd', '55 School st', 'Boston', 'MA', '01294'),
+('William', 'Samson', 'will@gmail.com', 'abcd', '334 Essex st', 'Brooklyn', 'NY', '37449'),
+('Stephanie', 'Johnson', 'steph@gmail.com', 'abcd', '49 Marks Ave', 'Queens', 'NY', '36455')

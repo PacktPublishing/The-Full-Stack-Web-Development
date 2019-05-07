@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colors, Backgrounds & Gradients</title>
+	<style>
+		#rounded1{
+			background:rgba(255,0,0,0.3);
+			color:white;
+			width:200px;
+			height:200px;
+			padding:30px;
+			border-radius:10px;
+		}
+
+		#rounded2{
+			background:hsl(120, 100%, 50%);
+			color:white;
+			width:200px;
+			height:200px;
+			padding:30px;
+			border-top-left-radius:10px;
+			border-bottom-right-radius:10px;
+		}
+
+		#rounded3{
+			background:hsla(120, 100%, 50%, 0.3);
+			color:white;
+			width:200px;
+			height:200px;
+			padding:30px;
+			border:3px black solid;
+			border-radius:50%;
+		}
+
+		img{
+			border-radius:50%;
+		}
+
+		#border-img{
+			border:10px solid transparent;
+			padding:15px;
+			border-image: url(border.png) 30 round;
+		}
+
+		#my-bg{
+			background-image: url(img_flwr.gif), url(paper.gif);
+			background-position: right bottom, left top;
+			background-repeat: no-repeat, repeat;
+			padding:15px 200px 15px 15px;
+			background-size: 100px 100px;
+		}
+
+		#grad1{
+			width:500px;
+			height:200px;
+			background:blue;
+			background:linear-gradient(blue, black, white);
+		}
+
+		#grad2{
+			width:500px;
+			height:200px;
+			background:blue;
+			background:linear-gradient(to right, blue, black);
+		}
+
+		#grad3{
+			width:500px;
+			height:200px;
+			background:blue;
+			background:linear-gradient(to bottom right, blue, black);
+		}
+
+		#grad4{
+			width:500px;
+			height:200px;
+			background:blue;
+			background:repeating-radial-gradient(circle, white 5%, blue 15%, black 60%);
+		}
+	</style>
+</head>
+<body>
+	<div id="rounded1">Rounded Corners</div>
+	<br>
+	<div id="rounded2">Rounded Corners</div>
+	<br>
+	<div id="rounded3">Rounded Corners</div>
+	<br>
+	<img src="bird.jpg">
+	<br>
+	<div id="border-img">This div uses an image border</div>
+	<br>
+	<div id="my-bg">
+		<h1>Welcome</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi metus, imperdiet eu vehicula ut, pulvinar vitae mauris. Nunc fringilla accumsan enim, id vestibulum erat accumsan eget. Nullam tempus erat sed turpis euismod varius. </p>
+		<p>Phasellus pulvinar risus vel risus vestibulum egestas. Aenean blandit, neque tincidunt porttitor volutpat, eros massa eleifend odio, ac dignissim ipsum sapien non lacus. Proin nulla nisl, accumsan eget cursus nec, molestie nec felis.</p>
+	</div>
+	<br>
+	<div id="grad1"></div><br>
+	<div id="grad2"></div><br>
+	<div id="grad3"></div><br>
+	<div id="grad4"></div><br>
+</body>
+</html>
