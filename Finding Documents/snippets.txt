@@ -1,0 +1,34 @@
+// Find all projects
+db.projects.find();
+db.projects.find().pretty();
+
+// Match condition
+db.projects.find({name: 'Company Website'}).pretty();
+db.projects.find({technologies: 'Ruby On Rails'}).pretty();
+
+// Match object
+db.projects.find(
+   {
+      client: {
+         name: 'Harry White',
+         email: 'hwhite@gmail.com',
+         phone: '333-333-3333'
+      }
+   }
+);
+
+// Match property in object
+db.projects.find({"client.name": "Steven Smith"});
+
+// Find by regex
+db.projects.find({name: /^R/}).pretty();
+
+// FindOne
+db.projects.findOne();
+db.projects.findOne({name:'Blog Application'});
+
+// Specify what to return
+db.projects.find({},{name:1, client:1}).pretty();
+
+// Exclude
+db.projects.find({},{developers:0, client:0}).pretty();
